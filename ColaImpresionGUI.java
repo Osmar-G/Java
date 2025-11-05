@@ -13,7 +13,7 @@ public class ColaImpresionGUI extends JFrame {
 	private JTextField txtDocumento;
 
 	public ColaImpresionGUI() {
-		setTitle("Cola de Impresión");
+		setTitle("Cola de ImpresiÃ³n");
 		setSize(500, 400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null); // Centra la ventana
@@ -23,6 +23,7 @@ public class ColaImpresionGUI extends JFrame {
 		panelPrincipal.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
 		JPanel panelSuperior = new JPanel(new FlowLayout());
+		panelSuperior.setBackground(Color.green);
 		JLabel lblDoc = new JLabel("Documento:");
 		txtDocumento = new JTextField(20);
 		JButton btnEncolar = new JButton("Encolar");
@@ -63,7 +64,7 @@ public class ColaImpresionGUI extends JFrame {
 
 		btnImprimir.addActionListener(e -> {
 			if (colaImpresion.isEmpty()) {
-				JOptionPane.showMessageDialog(this, "No hay documentos para imprimir", "Cola vacía",
+				JOptionPane.showMessageDialog(this, "No hay documentos para imprimir", "Cola vacÃ­a",
 						JOptionPane.INFORMATION_MESSAGE);
 			} else {
 				String doc = colaImpresion.poll();
@@ -91,9 +92,9 @@ public class ColaImpresionGUI extends JFrame {
 
 		btnMostrar.addActionListener(e -> actualizarCola());
 
-		// Acción botón Salir
+		// AcciÃ³n botÃ³n Salir
 		btnSalir.addActionListener(e -> {
-			int respuesta = JOptionPane.showConfirmDialog(this, "¿Desea salir?", "Confirmar salida",
+			int respuesta = JOptionPane.showConfirmDialog(this, "Â¿Desea salir?", "Confirmar salida",
 					JOptionPane.YES_NO_OPTION);
 			if (respuesta == JOptionPane.YES_OPTION) {
 				System.exit(0);
@@ -113,8 +114,9 @@ public class ColaImpresionGUI extends JFrame {
 		}
 	}
 
-	// Método principal
+	// MÃ©todo principal
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(ColaImpresionGUI::new);
 	}
 }
+
