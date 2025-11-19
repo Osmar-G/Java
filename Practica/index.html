@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Pago</h2>
+        <label for="producto1">Precio del Producto 1</label>
+        <input type="number" id="producto1" placeholder="Ej. 100" />
+
+        <label for="producto2">Precio del Producto 2</label>
+        <input type="number" id="producto2" placeholder="Ej. 150">
+
+        <label for="producto3">Precio del Producto 3</label>
+        <input type="number" id="producto3" placeholder="Ej. 150">
+
+        <button id="btnPagar">Calcular Total</button>
+        </div>
+
+        <div class="modal" id="modalTotal">
+            <div class="modal-content">
+                <span class="close" id="cerrarModal">&times;</span>
+                <h3>Total a Pagar</h3>
+                <p id="resultado"></p>
+
+                <label for="pago">Ingrese el pago</label>
+                <input type="number" id="pago" placeholder="Monto Entregado"/>
+
+                <button id="btnCobrar">Cobrar</button>
+                <p id="cambio"></p>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
