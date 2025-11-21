@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard con Iconos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar">
+    <h2>Mi Panel</h2>
+
+    <ul>
+        <li onclick="cargar('home')">
+            <img src="img/home.jpg" alt="Inicio">
+            Inicio
+        </li>
+
+        <li onclick="cargar('usuarios')">
+            <img src="img/user.jpg" alt="Usuarios">
+            Usuarios
+        </li>
+
+        <li onclick="cargar('reportes')">
+            <img src="img/report.jpg" alt="Reportes">
+            Reportes
+        </li>
+
+        <li onclick="cargar('config')">
+            <img src="img/config.jpg" alt="Configuración">
+            Configuración
+        </li>
+    </ul>
+</div>
+</div>
+<div class="main">
+    <header>
+        <h1 id="titulo">Inicio</h1>
+    </header>
+
+    <section id="contenido">
+
+        <!-- Cards iniciales -->
+        <div class="cards">
+
+            <div class="card">
+                <img src="img/user.jpg" class="icon">
+                <h3>Usuarios</h3>
+                <p id="numUsuarios">24</p>
+            </div>
+
+            <div class="card">
+                <img src="img/sales.jpg" class="icon">
+                <h3>Ventas</h3>
+                <p id="numVentas">150</p>
+            </div>
+
+            <div class="card">
+                <img src="img/alert.jpg" class="icon">
+                <h3>Alertas</h3>
+                <p id="numAlertas">3</p>
+            </div>
+
+        </div>
+
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
