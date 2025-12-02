@@ -1,0 +1,34 @@
+package Arboles;
+
+ import javax.swing.*;
+ import javax.swing.tree.DefaultMutableTreeNode;
+ import java.awt.*;
+ 
+public class arbol extends JFrame {
+     public arbol(){
+    	super("Ejemplo de Arbol en Swing");
+    	DefaultMutableTreeNode nodoPadre = new DefaultMutableTreeNode("Raiz");
+    	DefaultMutableTreeNode nodoHijo1 = new DefaultMutableTreeNode("Hijo 1");
+    	DefaultMutableTreeNode nodoHijo2 = new DefaultMutableTreeNode("Hijo 2");
+    	DefaultMutableTreeNode nodoNieto1 = new DefaultMutableTreeNode("Nieto 1.1");
+    	DefaultMutableTreeNode nodoNieto2 = new DefaultMutableTreeNode("Nieto 2.1");
+    	
+    	nodoPadre.add(nodoHijo1);
+    	nodoPadre.add(nodoHijo2);
+    	nodoHijo1.add(nodoNieto1);
+    	nodoHijo2.add(nodoNieto2);
+    	
+    	JTree arbol = new JTree(nodoPadre);
+    	
+    	JScrollPane scrollPane = new JScrollPane(arbol);
+    	
+    	getContentPane().add(scrollPane,BorderLayout.CENTER);
+    	setSize(300,200);
+    	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	setLocationRelativeTo(null);
+    	setVisible(true);
+     }
+     public static void main(String[]args) {
+    	 SwingUtilities.invokeLater(() -> new arbol());
+     }
+}
