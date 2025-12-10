@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Formulario Simple</title>
+    </head>
+    <body>
+        <h2>Registro de Usuario</h2>
+
+        <form action="guardar.php" method="POST">
+            <label>Escribe tu nombre:</label><br>
+            <input type="text" name="nombre" required><br><br> 
+            <label>Escribe tu correo</label>
+            <input type="email" name="correo" required><br><br>    
+            <label>Escribe tu Edad:</label><br>
+            <input type="number" name="edad" required><br><br>     
+            <button type="submit">Guardar</button>
+        </form>
+        <br><br>
+        <form action="ver.php" method="get">
+            <button type="submit">Ver Registros</button>
+        </form>
+    </body>
+</html>
